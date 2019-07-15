@@ -9,6 +9,6 @@ do
   echo ${index} ${ip}
   addr=${addrArray[${index}]}
   echo ${addr}
-  ssh -o StrictHostKeyChecking=no -i ${pem} ubuntu@${ip} "nohup ./run.sh ${addr} >~/out.log 2>&1 &"
+  ssh -o StrictHostKeyChecking=no -i ${pem} ubuntu@${ip} "nohup ~/run.sh ${addr} >~/out.log 2>&1 &"
   ((index++))
 done
