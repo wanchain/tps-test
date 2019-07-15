@@ -1,4 +1,4 @@
-pem=~/nodes/tps.pem
+pem=$(cat pem.txt)
 
 index=0
 for ip in $(cat ip.txt)

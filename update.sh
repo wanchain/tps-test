@@ -1,5 +1,5 @@
 #!/bin/bash
-pem=~/tps.pem
+pem=$(cat pem.txt)
 
 cd ~/go-wanchain && git checkout posperf && git pull && make
 

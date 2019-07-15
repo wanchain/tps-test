@@ -1,5 +1,5 @@
 #!/bin/bash
-pem=~/tps.pem
+pem=$(cat pem.txt)
 
 for ip in $(cat ip.txt)
 do 
