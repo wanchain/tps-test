@@ -5,6 +5,6 @@ index=0
 for ip in $(cat ip.txt)
 do 
   echo ${index} ${ip}
-  ssh -o StrictHostKeyChecking=no -i ${pem} ubuntu@${ip} "tail out.log"
+  ssh -o StrictHostKeyChecking=no -i ${pem} ubuntu@${ip} "tail -n 30 out.log |grep Imported"
   ((index++))
 done

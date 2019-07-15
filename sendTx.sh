@@ -4,7 +4,7 @@ pem=$(cat pem.txt)
 addrArray=($(awk '{print $1}' txAddress.txt))  
 pKeyArray=($(awk '{print $2}' txAddress.txt)) 
 ipArray=($(awk '{print $1}' ip.txt)) 
-index=20
+index=16
 for addrInfo in $(cat txAddress.txt)
 do 
   echo ${index} ${ipArray[$index]} ${addrArray[$index]} 
