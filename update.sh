@@ -1,7 +1,7 @@
 #!/bin/bash
 pem=$(cat pem.txt)
 
-cd ~/go-wanchain && git checkout pos_single_select && git pull && make release
+cd ~/go-wanchain && git checkout posperf && git pull && make release
 
 cd ~/tpsTest
 
