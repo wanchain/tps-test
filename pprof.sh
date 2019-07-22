@@ -1,10 +1,18 @@
 #!/bin/bash
-pem=$(cat pem.txt)
-
+set +x
+mkdir ~/pprofSVG
+circleIndex=0
+while true; do
 index=0
 for ip in $(cat ip.txt)
 do 
   echo ${index} ${ip}
-  ssh -o StrictHostKeyChecking=no -i ${pem} ubuntu@${ip} "nohup ~/watch.sh >~/watch.log 2>&1 &"
+  mkdir ~/pprofSVG/${circleIndex}
+  go tool pprof -alloc_space -cum -svg http://${ip}:6060/debug/pprof/heap > ~/pprofSVG/${circleIndex}/heap-node-${index}.svg
   ((index++))
 done
+sleep 30
+((circleIndex++))
+done
+
+
