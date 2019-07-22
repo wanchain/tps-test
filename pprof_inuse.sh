@@ -4,7 +4,7 @@ mkdir ~/pprofSVG_inuse
 circleIndex=0
 while true; do
 index=0
-mkdir ~/pprofSVG/${circleIndex}
+mkdir ~/pprofSVG_inuse/${circleIndex}
 
 for ip in $(cat ip.txt)
 do 
