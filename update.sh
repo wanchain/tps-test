@@ -12,7 +12,7 @@ do
   scp -o StrictHostKeyChecking=no -i ${pem} ~/go-wanchain/build/bin/gwan-linux-amd64 ubuntu@${ip}:~/gwan
   scp -o StrictHostKeyChecking=no -i ${pem} ~/tpsTest/run.sh ubuntu@${ip}:~/ 
   scp -o StrictHostKeyChecking=no -i ${pem} ~/tpsTest/tx.sh ubuntu@${ip}:~/ 
-  scp -o StrictHostKeyChecking=no -i ${pem} ~/tpsTest/watch.sh ubuntu@${ip}:~/ 
+  #scp -o StrictHostKeyChecking=no -i ${pem} ~/tpsTest/watch.sh ubuntu@${ip}:~/ 
 
 done
 
