@@ -1,7 +1,7 @@
 #!/bin/bash
 pem=$(cat pem.txt)
 
-cd ~/go-wanchain && git pull &&git checkout pf2 && git pull && make release
+cd ~/go-wanchain && git pull &&git checkout tps-test && git pull && make release
 
 cd ~/tpsTest
 
