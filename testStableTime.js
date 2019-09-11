@@ -5,7 +5,7 @@ function testStableTime() {
         var timeNow = eth.getBlock(number).timestamp;
         var stableNumber = pos.getMaxStableBlkNumber();
         var stableTime = eth.getBlock(stableNumber).timestamp;
-        console.log(number, stableNumber, timeNow, stableTime, pos.getSlotID());
+        console.log("number:", number, "stableNumber:", stableNumber, "confirmTime:", timeNow - stableTime, "timeStamp:", timeNow, stableTime);
         oldNumber = number;
     }
 }
