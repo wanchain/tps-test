@@ -1,6 +1,6 @@
 function getTps() {
     var number = eth.blockNumber;
-    console.log(pos.getTps(number - 100, number));
+    console.log(pos.getTps(number - 50, number));
 }
 
-setInterval(getTps, 5000);
+setInterval(getTps, 15000);
